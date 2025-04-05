@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Générateur de Fiche RP - Site-12</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: #f4f4f4;
+      padding: 2em;
+    }
+    input, textarea, select, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 0.5em;
+      background: #1a1a1a;
+      color: white;
+      border: 1px solid #444;
+    }
+    .fiche {
+      border: 2px solid #d40000;
+      padding: 1em;
+      background: #1f1f1f;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>📄 Générateur de Fiche RP - Fondation SCP</h1>
+  <form id="ficheForm">
+    <input type="text" id="nom" placeholder="Nom RP (ex : Dr Elias Green)" required>
+    <div style="display: flex; gap: 1em;">
+      <input type="text" id="id" placeholder="ID Agent (ex : S12-SCI-383)" style="flex: 1;">
+      <button type="button" onclick="genererID()">🔄 Générer ID Agent</button>
+    </div>
+    <input type="text" id="role" placeholder="Rôle (ex : Chercheur Senior)" required>
+    <select id="branche">
+      <option value="">-- Branche --</option>
+      <option value="Scientifique">🧬 Scientifique</option>
+      <option value="Sécuritaire">🛡️ Sécuritaire</option>
+      <option value="Maintenance">⚙️ Maintenance</option>
+      <option value="Administrative">🧾 Administrative</option>
+      <option value="Communication">📣 Communication</option>
+    </select>
+    <input type="text" id="affectation" placeholder="Affectation (ex : Biohazard - Site-12)">
+    <input type="date" id="entree" placeholder="Date d’entrée">
+    <textarea id="description" rows="4" placeholder="Description / Histoire RP"></textarea>
+    <button type="submit">Générer la fiche</button>
+  </form>
+
+  <div id="ficheResultat" class="fiche" style="display:none;"></div>
+
+  <script>
+    function genererID() {
+      const branche = document.getElementById("branche").value;
+      const codes = {
+        "Scientifique": "SCI",
+        "Sécuritaire": "SEC",
+        "Maintenance": "TEC",
+        "Administrative": "ADM",
+        "Communication": "COM"
+      };
+      if (!branche || !codes[branche]) {
+        alert("Veuillez sélectionner une branche pour générer un ID.");
+        return;
+      }
+      const numero = Math.floor(100 + Math.random() * 900);
+      const idGenere = `S12-${codes[branche]}-${numero}`;
+      document.getElementById("id").value = idGenere;
+    }
+
+    document.getElementById("ficheForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nom = document.getElementById("nom").value;
+      const id = document.getElementById("id").value;
+      const role = document.getElementById("role").value;
+      const branche = document.getElementById("branche").value;
+      const affectation = document.getElementById("affectation").value;
+      const entree = document.getElementById("entree").value;
+      const description = document.getElementById("description").value;
+
+      const ficheHTML = `
+        <h2>Fiche de Personnage RP</h2>
+        <ul>
+          <li><strong>Nom :</strong> ${nom}</li>
+          <li><strong>ID Agent :</strong> ${id}</li>
+          <li><strong>Rôle :</strong> ${role}</li>
+          <li><strong>Branche :</strong> ${branche}</li>
+          <li><strong>Affectation :</strong> ${affectation}</li>
+          <li><strong>Date d’entrée :</strong> ${entree}</li>
+        </ul>
+        <p><strong>Description :</strong> ${description}</p>
+        <p style="font-style: italic; color: #d40000;">⚠️ Données générées localement. Merci de transmettre votre fiche à l'administration pour archivage officiel.</p>
+      `;
+      const container = document.getElementById("ficheResultat");
+      container.innerHTML = ficheHTML;
+      container.style.display = "block";
+    });
+  </script>
+</body>
+</html>
