@@ -1,15 +1,59 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>branche-gestion.html</title>
-  <link rel="stylesheet" href="../style.css">
+  <title>Branche - Gestion Générale</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    body { color: white; background-color: #121212; padding: 2rem; }
+    h1 { color: #d40000; }
+    h2 { margin-top: 1.5rem; }
+    ul, table { margin-left: 1.5rem; }
+    table { border-collapse: collapse; width: 95%; margin-top: 1rem; }
+    th, td { border: 1px solid #555; padding: 0.5rem; text-align: left; vertical-align: middle; }
+    th { background-color: #222; color: #fff; }
+    a { color: #00bfff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .portrait {
+      width: 60px;
+      height: 75px;
+      object-fit: cover;
+      border: 1px solid #444;
+    }
+    .blurred { filter: blur(2px) grayscale(100%); }
+    .confidential { font-style: italic; color: #999; }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Gestion</h1>
-    <p>🗂️ Gère les ressources humaines, les archives et la logistique.</p>
-    <a href="branches.html" class="button">⬅️ Retour aux branches</a>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="branches.html">Branches</a></li>
+      <li><a href="conseil.html">Conseil O6</a></li>
+      <li><a href="archives.html">Archives du Conseil</a></li>
+      <li><a href="journal.html">Journal Interne</a></li>
+      <li><a href="reseau.html">Réseau de la Fondation</a></li>
+      <li><a href="generer-rapport.html">Rapport RP</a></li>
+    </ul>
+  </nav>
+
+  <h1>📁 Branche : Gestion Générale</h1>
+  <p>Description RP de la branche Gestion Générale à compléter.</p>
+
+  <h2>📌 Rôles principaux :</h2>
+  <ul>
+    <li>Responsable Financier</li>
+<li>Chef de service gestion</li>
+<li>Contrôle des effectifs</li>
+<li>Superviseur RH</li>
+  </ul>
+
+  <h2>👤 Membres principaux :</h2>
+  <table>
+    <tr><th>Portrait</th><th>Nom RP</th><th>Poste</th><th>Fiche</th></tr>
+    <tr><td><img src="https://via.placeholder.com/60x75.png?text=Confidentiel" class="portrait blurred"></td><td>Inconnu</td><td>Responsable Gestion Générale</td><td><span class="confidential">🔒 Classifié</span></td></tr>
+
+  </table>
 </body>
 </html>
