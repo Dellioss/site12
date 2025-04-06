@@ -1,59 +1,100 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Branche - Maintenance</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <style>
-    body { color: white; background-color: #121212; padding: 2rem; }
-    h1 { color: #d40000; }
-    h2 { margin-top: 1.5rem; }
-    ul, table { margin-left: 1.5rem; }
-    table { border-collapse: collapse; width: 95%; margin-top: 1rem; }
-    th, td { border: 1px solid #555; padding: 0.5rem; text-align: left; vertical-align: middle; }
-    th { background-color: #222; color: #fff; }
-    a { color: #00bfff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .portrait {
-      width: 60px;
-      height: 75px;
-      object-fit: cover;
-      border: 1px solid #444;
-    }
-    .blurred { filter: blur(2px) grayscale(100%); }
-    .confidential { font-style: italic; color: #999; }
-  </style>
+    <meta charset="UTF-8">
+    <title>Branche Maintenance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: 'Share Tech Mono', monospace;
+        }
+        header {
+            background-color: #111;
+            border-bottom: 2px solid cyan;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: cyan;
+        }
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px;
+        }
+        .intro {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-left: 4px solid cyan;
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #00ffff;
+        }
+        .grades {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .grade {
+            background-color: #222;
+            border: 2px solid #00ffff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .grade h3 {
+            margin-top: 0;
+            color: cyan;
+        }
+        .grade p {
+            margin: 5px 0;
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 30px;
+            color: cyan;
+            border: 1px solid cyan;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        a.button:hover {
+            background-color: cyan;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="../index.html">Accueil</a></li>
-      <li><a href="branches.html">Branches</a></li>
-      <li><a href="conseil.html">Conseil O6</a></li>
-      <li><a href="archives.html">Archives du Conseil</a></li>
-      <li><a href="journal.html">Journal Interne</a></li>
-      <li><a href="reseau.html">Réseau de la Fondation</a></li>
-      <li><a href="generer-rapport.html">Rapport RP</a></li>
-    </ul>
-  </nav>
-
-  <h1>📁 Branche : Maintenance</h1>
-  <p>Description RP de la branche Maintenance à compléter.</p>
-
-  <h2>📌 Rôles principaux :</h2>
-  <ul>
-    <li>Chef technique</li>
-<li>Technicien zone</li>
-<li>Logistique (G.I.D.L / G.E.D.L)</li>
-<li>Électricien / Réparateur</li>
-  </ul>
-
-  <h2>👤 Membres principaux :</h2>
-  <table>
-    <tr><th>Portrait</th><th>Nom RP</th><th>Poste</th><th>Fiche</th></tr>
-    <tr><td><img src="https://via.placeholder.com/60x75.png?text=Confidentiel" class="portrait blurred"></td><td>Titi</td><td>Responsable Maintenance</td><td><span class="confidential">🔒 Classifié</span></td></tr>
-
-  </table>
+    <header>
+        <h1>Branche Maintenance</h1>
+    </header>
+    <main>
+        <div class="intro">
+            <h2>Présentation</h2>
+            <p>La branche maintenance veille à la stabilité des installations, systèmes techniques et dispositifs de confinement du Site-12.</p>
+        </div>
+        <div class="grades">
+            <div class="grade">
+                <h3>Technicien</h3>
+                <p><strong>Rôle :</strong> Répare les circuits, portes et dispositifs de sécurité de base.</p>
+                <p><strong>Accès :</strong> Zones techniques EZ</p>
+            </div>
+            <div class="grade">
+                <h3>Ingénieur</h3>
+                <p><strong>Rôle :</strong> Analyse et répare les équipements SCP complexes.</p>
+                <p><strong>Accès :</strong> Zones EZ / HCZ</p>
+            </div>
+            <div class="grade">
+                <h3>Chef Maintenance</h3>
+                <p><strong>Rôle :</strong> Supervise les équipes, planifie les réparations critiques.</p>
+                <p><strong>Accès :</strong> Toutes zones sauf CCZ restreinte</p>
+            </div>
+        </div>
+        <a class="button" href="../branches.html">⬅️ Retour aux branches</a>
+    </main>
 </body>
 </html>
