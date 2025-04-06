@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>
+    if (localStorage.getItem("autorise") !== "true") {
+      window.location.href = "connexion.html";
+    }
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Site-12 | Fondation SCP</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .etat-site {
+      background-color: #1a1a1a;
+      padding: 1em;
+      margin-bottom: 2em;
+      border: 2px solid #444;
+    }
+
+    .etat-site ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .etat-site li {
+      padding: 0.3em 0;
+    }
+
+    .section-title {
+      margin-top: 2em;
+      font-size: 1.5em;
+      border-bottom: 2px solid #d40000;
+      padding-bottom: 0.3em;
+    }
+
+    .rp-block blockquote {
+      font-style: italic;
+      border-left: 3px solid red;
+      padding-left: 1em;
+    }
+  </style>
+<link rel="stylesheet" href="scp-style-military.css">
+</head>
+<body>
+  <header>
+    <div class="logo">SITE-12</div>
+    
+
+
+
+
+
+
+<nav>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="pages/branches.html">Branches</a></li>
+    <li><a href="pages/conseil.html">Conseil O6</a></li>
+    <li><a href="pages/archives.html">Archives du Conseil</a></li>
+    <li><a href="pages/journal.html">Journal Interne</a></li>
+    <li><a href="pages/reseau.html">Réseau de la Fondation</a></li>
+    <li><a href="pages/generer-rapport.html">Rapport RP</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+  </header>
+
+  <main>
+
+    <!-- Présentation HRP -->
+    <section class="hero">
+      <h1>Bienvenue sur le Site-12</h1>
+      <p>Site officiel du serveur Minecraft RP basé sur l’univers de la Fondation SCP.</p>
+      <p>Explorez les fiches SCP, consultez les rapports, accédez au journal interne et plongez dans l’immersion d’un véritable site de confinement.</p>
+      <p>Rejoignez-nous pour une expérience RP complète, sérieuse, mais fun !</p>
+    </section>
+<section class="tests">
+  <h2 class="section-title">📂 Accès Rapide - Dossiers RP</h2>
+  <p>📝 <a href="generer-fiche.html" style="color:#f4f4f4; text-decoration:underline;">Générer une fiche de personnage RP</a></p>
+  <p>📁 <a href="dossiers-agents.html" style="color:#f4f4f4; text-decoration:underline;">Consulter les dossiers des agents archivés</a></p>
+  <p style="font-style: italic; color:#d40000;">⚠️ Tous les agents doivent disposer d’une fiche enregistrée dans les archives officielles du Site-12.</p>
+</section>
+
+
+    <!-- État du Site -->
+    
+
+<section class="etat-site">
+  <h2 class="section-title">🛰️ État du Site</h2>
+  <ul>
+    <li id="zone-ez">Zone EZ : Stable</li>
+    <li id="zone-hcz">Zone HCZ : Surveillance normale</li>
+    <li id="zone-ccz">Zone CCZ : Opérations standards</li>
+    <li>🔐 Niveau de sécurité : <span id="niveau-securite">ALPHA</span></li>
+  </ul>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const niveau = localStorage.getItem("niveau_securite") || "ALPHA";
+    document.getElementById("niveau-securite").textContent = niveau;
+
+    const etats = {
+      ALPHA: {
+        ez: "🟢 Zone EZ : Stable",
+        hcz: "🟢 Zone HCZ : Surveillance normale",
+        ccz: "🟢 Zone CCZ : Opérations standards"
+      },
+      SIGMA: {
+        ez: "🟢 Zone EZ : Contrôle de sécurité renforcé",
+        hcz: "🟡 Zone HCZ : Activité non confirmée",
+        ccz: "🟡 Zone CCZ : Accès sous autorisation"
+      },
+      KAPPA: {
+        ez: "🟡 Zone EZ : Filtrage en cours",
+        hcz: "🟠 Zone HCZ : Anomalie détectée",
+        ccz: "🟠 Zone CCZ : Protocole d’urgence prêt"
+      },
+      EPSILON: {
+        ez: "🔴 Zone EZ : Verrouillée",
+        hcz: "🔴 Zone HCZ : Confinement actif",
+        ccz: "🔴 Zone CCZ : Intervention en cours"
+      },
+      NYX: {
+        ez: "⚫ Zone EZ : Évacuée",
+        hcz: "⚫ Zone HCZ : Inaccessible",
+        ccz: "⚫ Zone CCZ : Données classifiées"
+      }
+    };
+
+    const zone = etats[niveau] || etats["ALPHA"];
+    document.getElementById("zone-ez").textContent = zone.ez;
+    document.getElementById("zone-hcz").textContent = zone.hcz;
+    document.getElementById("zone-ccz").textContent = zone.ccz;
+  });
+</script>
+
+
+<!-- Message RP de l’O-1 -->
+    <section class="tests rp-block">
+      <h2 class="section-title">🕶️ Message de l’O-1</h2>
+      <blockquote>
+        « Nous mourons dans l’ombre pour que vous puissiez vivre dans la lumière. »<br>
+        <span style="float: right;">— Oméga-1</span>
+      </blockquote>
+    </section>
+
+    <!-- Branches -->
+    <section class="tests">
+      <h2 class="section-title">📌 Branches opérationnelles du Site-12</h2>
+      <ul>
+        <li>🔬 <strong>Scientifique</strong> — recherches, tests, expérimentations SCP</li>
+        <li>🛡️ <strong>Sécuritaire</strong> — sécurité interne et intervention tactique</li>
+        <li>⚙️ <strong>Maintenance</strong> — gestion technique, infrastructures et logistique</li>
+        <li>🧾 <strong>Administrative</strong> — direction, organisation, autorité du Conseil</li>
+        <li>📣 <strong>Communication</strong> — relais interne, messages officiels, journal RP</li>
+      </ul>
+    </section>
+
+    <!-- Histoire -->
+    <section class="tests">
+      <h2 class="section-title">📜 Histoire officielle du Site-12</h2>
+      <p style="font-style: italic;">“L'histoire est un perpétuel recommencement.” — Thucydide</p>
+      <p><strong>🔒 Classification :</strong> Niveau 4 - Accès Restreint</p>
+      <hr>
+      <p>L’histoire du Site-12 commence dans une période sombre pour la Fondation SCP.<br>
+      Pendant de nombreuses années, la Fondation connut une ère prospère grâce au Site-22, considéré comme supérieur aux autres sites, notamment le Site-19 (détruit par l’Insurrection du Chaos).<br>
+      Mais cette prospérité fut brisée.</p>
+
+      <p><strong>🔻 En 2012, le Site-22 fut attaqué par :</strong><br>
+      🎯 Des forces de l’Insurrection du Chaos<br>
+      🐍 Un mystérieux groupe nommé la Main du Serpent</p>
+      <p>Malgré sa puissance, le Site-22 tomba.</p>
+
+      <hr>
+      <p><strong>💀 L’évacuation ratée vers le Site-17</strong><br>
+      Sous ordre du Conseil, la Fondation organisa le transfert des SCP survivants vers un autre site.<br>
+      Le convoi fit halte dans un village isolé nommé Brolver.</p>
+
+      <p>❗ Malheureusement, l’Insurrection du Chaos avait anticipé ce déplacement...<br>
+      ➡️ Elle frappa violemment pendant l’arrêt.</p>
+
+      <hr>
+      <p><strong>⚠️ Dernier recours : l’Ordre O-1</strong><br>
+      Face à l'assaut, l'O-1 du Site-22, présent dans le convoi, prit une décision fatale :<br>
+      ☢️ Il activa un prototype de bombe nucléaire développé en secret.<br>
+      ➡️ Le village fut rasé. Les forces ennemies, les SCP et même le personnel furent détruits ou dispersés.</p>
+
+      <hr>
+      <p><strong>🎖️ Naissance du Site-12</strong><br>
+      Ce chaos entraîna la création d’une ultime forteresse :<br>
+      Le Site-12, conçu comme :<br>
+      🛡️ Un centre de commandement<br>
+      ⚙️ Un bastion militaire et scientifique<br>
+      🧬 Un pôle de confinement et de recherche avancée</p>
+      <p>Il est depuis le dernier bastion de la Fondation SCP, placé sous la juridiction directe du Conseil O6.</p>
+
+      <hr>
+      <blockquote style="font-style: italic; border-left: 3px solid red; padding-left: 1em;">
+        “Nous sommes la dernière ligne. L’ennemi ne passe pas.”<br>
+        <span style="float: right;">— Oméga-1, Directeur Général du Site-12</span>
+      </blockquote>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Site-12 - Fondation SCP | Serveur Minecraft RP SCP</p>
+  </footer>
+
+<!-- Panneau admin interactif intégré -->
+<div id="adminPanel" style="display:none;">
+
+
+  <h1>🛠️ Interface Admin - Gestion des Fiches RP</h1>
+
+  <h2>➕ Ajouter une fiche (locale)</h2>
+  <form id="ajoutForm">
+    <input type="text" id="id" placeholder="ID Agent">
+    <input type="text" id="nom" placeholder="Nom">
+    <input type="text" id="role" placeholder="Rôle">
+    <input type="text" id="branche" placeholder="Branche">
+    <input type="text" id="affectation" placeholder="Affectation">
+    <input type="date" id="entree">
+    <textarea id="description" placeholder="Description / Histoire RP"></textarea>
+    <button type="submit">Ajouter</button>
+  </form>
+
+  <h2>📋 Fiches enregistrées (localStorage)</h2>
+  <input type="text" id="search" placeholder="🔍 Rechercher un nom ou ID...">
+  <div id="listeFiches"></div>
+
+  <script>
+    function chargerFiches() {
+      const conteneur = document.getElementById("listeFiches");
+      const recherche = document.getElementById("search").value.toLowerCase();
+      conteneur.innerHTML = "";
+      const fiches = JSON.parse(localStorage.getItem("fichesRP") || "[]");
+      fiches
+        .filter(f => f.nom.toLowerCase().includes(recherche) || f.id.toLowerCase().includes(recherche))
+        .forEach((fiche, index) => {
+          const div = document.createElement("div");
+          div.className = "fiche";
+          div.innerHTML = `
+            <h3>${fiche.nom} (${fiche.id})</h3>
+            <p><strong>Rôle :</strong> ${fiche.role}</p>
+            <p><strong>Branche :</strong> ${fiche.branche}</p>
+            <p><strong>Affectation :</strong> ${fiche.affectation}</p>
+            <p><strong>Date d’entrée :</strong> ${fiche.entree}</p>
+            <p><strong>Description :</strong> ${fiche.description}</p>
+            <div class="actions">
+              <button onclick="supprimerFiche(${index})">🗑️ Supprimer</button>
+              <button onclick="exporterFiche(${index})">💾 Export JSON</button>
+            </div>
+          `;
+          conteneur.appendChild(div);
+        });
+    }
+
+    function supprimerFiche(index) {
+      const fiches = JSON.parse(localStorage.getItem("fichesRP") || "[]");
+      fiches.splice(index, 1);
+      localStorage.setItem("fichesRP", JSON.stringify(fiches));
+      chargerFiches();
+    }
+
+    function exporterFiche(index) {
+      const fiches = JSON.parse(localStorage.getItem("fichesRP") || "[]");
+      const fiche = fiches[index];
+      const blob = new Blob([JSON.stringify(fiche, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `fiche_${fiche.id}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    document.getElementById("ajoutForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const fiche = {
+        id: document.getElementById("id").value,
+        nom: document.getElementById("nom").value,
+        role: document.getElementById("role").value,
+        branche: document.getElementById("branche").value,
+        affectation: document.getElementById("affectation").value,
+        entree: document.getElementById("entree").value,
+        description: document.getElementById("description").value
+      };
+      const fiches = JSON.parse(localStorage.getItem("fichesRP") || "[]");
+      fiches.push(fiche);
+      localStorage.setItem("fichesRP", JSON.stringify(fiches));
+      e.target.reset();
+      chargerFiches();
+    });
+
+    document.getElementById("search").addEventListener("input", chargerFiches);
+
+    window.onload = chargerFiches;
+  </script>
+
+</div>
+
+<!-- Bouton d'ouverture admin -->
+<div class="admin-toggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+  <button onclick="document.getElementById('adminPanel').style.display='block'">🛡️ Admin</button>
+</div>
+
+</body>
+
+</html>
