@@ -1,77 +1,50 @@
 
 body {
+  background-color: #101010;
+  color: #00ffe0;
+  font-family: 'Courier New', Courier, monospace;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0e0e0e;
-  color: #f4f4f4;
+  padding: 0;
 }
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1a1a1a;
-  padding: 1em 2em;
-  border-bottom: 2px solid #d40000;
-}
-
-.logo {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #d40000;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1em;
-}
-
-nav a {
-  text-decoration: none;
-  color: #f4f4f4;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #d40000;
-}
-
-.hero {
-  padding: 4em 2em;
-  background-color: #121212;
+header, .container {
+  padding: 2rem;
   text-align: center;
 }
-
-.alertes {
-  padding: 2em;
-  background-color: #1a1a1a;
-  border-top: 1px solid #333;
+h1, h2 {
+  color: #00ffe0;
 }
-
-footer {
-  text-align: center;
-  padding: 1em;
-  background-color: #1a1a1a;
-  color: #999;
-  border-top: 1px solid #333;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
 }
-
-.tests, .archives {
-  padding: 2em;
-  background-color: #121212;
-  border-top: 1px solid #333;
-}
-
 .card {
-  background-color: #1f1f1f;
-  border-left: 4px solid #d40000;
-  padding: 1em;
-  margin-bottom: 1em;
-  box-shadow: 0 0 10px rgba(212, 0, 0, 0.3);
+  background-color: #1a1a1a;
+  border: 2px solid #00ffe0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
 }
-
-.card h3 {
-  margin-top: 0;
-  color: #e53935;
+a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #00ffe0;
+  color: #101010;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+a:hover {
+  background: #00cccc;
+}
+.return-button {
+  background: #00ffe0;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
 }
