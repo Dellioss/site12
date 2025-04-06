@@ -1,1 +1,1 @@
-console.log('Site-12 loaded');
+// JS principal ici
