@@ -2,108 +2,62 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Site-12 — Fondation SCP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Share Tech Mono', monospace;
-            background-color: #0d0d0d;
-            color: #f44336;
-        }
-        header {
-            background-color: #0d0d0d;
-            border-bottom: 2px solid red;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            margin-bottom: 20px;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: cyan;
-        }
-        h1, h2 {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            background-color: #111;
-            border: 1px solid red;
-        }
-        .quote {
-            font-style: italic;
-            color: #ccc;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .section {
-            margin: 30px 0;
-        }
-        .section-title {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #03a9f4;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Site-12 - Accueil</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>SITE-12</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="pages/branches.html">Branches</a>
-            <a href="pages/conseil.html">Conseil O6</a>
-            <a href="pages/archives.html">Archives du Conseil</a>
-            <a href="pages/journal.html">Journal Interne</a>
-            <a href="pages/reseau.html">Réseau</a>
-            <a href="pages/rapport.html">Rapport RP</a>
-        </nav>
-    </header>
-
-    <div class="container">
-        <h2>Bienvenue sur le Site-12</h2>
-        <p class="quote">“L'histoire est un perpétuel recommencement.” — Thucydide</p>
-
-        <div class="section">
-            <div class="section-title">📜 HISTOIRE OFFICIELLE DU SITE-12</div>
-            <p>🔒 Classification : Niveau 4 - Accès Restreint</p>
-            <p>L’histoire du Site-12 commence dans une période sombre pour la Fondation SCP.
-            Pendant de nombreuses années, la Fondation connut une ère prospère grâce au Site-22, considéré comme supérieur aux autres sites, notamment le Site-19 (détruit par l’Insurrection du Chaos).
-            Mais cette prospérité fut brisée.</p>
-
-            <p>🔻 En 2012, le Site-22 fut attaqué par :
-            🎯 Des forces de l’Insurrection du Chaos
-            🐍 Un mystérieux groupe nommé la Main du Serpent
-            <br>Malgré sa puissance, le Site-22 tomba.</p>
-
-            <p>💀 L’évacuation ratée vers le Site-17<br>
-            Sous ordre du Conseil, la Fondation organisa le transfert des SCP survivants vers un autre site.
-            Le convoi fit halte dans un village isolé nommé Brolver.
-            <br>❗ Malheureusement, l’Insurrection du Chaos avait anticipé ce déplacement...
-            <br>➡️ Elle frappa violemment pendant l’arrêt.</p>
-
-            <p>⚠️ Dernier recours : l’Ordre O-1<br>
-            Face à l'assaut, l'O-1 du Site-22, présent dans le convoi, prit une décision fatale :
-            ☢️ Il activa un prototype de bombe nucléaire développé en secret.
-            ➡️ Le village fut rasé. Les forces ennemies, les SCP et même le personnel furent détruits ou dispersés.</p>
-
-            <p>🎖️ Naissance du Site-12<br>
-            Ce chaos entraîna la création d’une ultime forteresse :
-            Le Site-12, conçu comme :
-            🛡️ Un centre de commandement
-            ⚙️ Un bastion militaire et scientifique
-            🧬 Un pôle de confinement et de recherche avancée
-            <br>Il est depuis le dernier bastion de la Fondation SCP, placé sous la juridiction directe du Conseil O6.</p>
-
-            <p class="quote">🕯️ “Nous sommes la dernière ligne. L’ennemi ne passe pas.”<br>— Oméga-1, Directeur Général du Site-12</p>
-        </div>
+  <div class="container">
+    <h1 class="title">SITE-12</h1>
+    <div class="blocks">
+      <div class="block" onclick="showContent('histoire')">📜 Histoire du Site-12</div>
+      <div class="block" onclick="showContent('bienvenue')">👋 Bienvenue</div>
     </div>
+    <div class="content" id="histoire" style="display:none;">
+      <h2>📜 HISTOIRE OFFICIELLE DU SITE-12</h2>
+      <p>“L'histoire est un perpétuel recommencement.” — Thucydide.</p>
+      <p><strong>Classification :</strong> Niveau 4 - Accès Restreint</p>
+      <p>L’histoire du Site-12 commence dans une période sombre pour la Fondation SCP...
+      <br><br>
+      En 2012, le Site-22 fut attaqué par :
+      <ul>
+        <li>🎯 Des forces de l’Insurrection du Chaos</li>
+        <li>🐍 Un mystérieux groupe nommé la Main du Serpent</li>
+      </ul>
+      Malgré sa puissance, le Site-22 tomba.
+      <br><br>
+      Sous ordre du Conseil, le convoi fit halte dans un village nommé Brolver. L’Insurrection frappa violemment.
+      <br><br>
+      ⚠️ Dernier recours : activation d’un prototype nucléaire par l’O-1 → village rasé, perte totale.
+      <br><br>
+      🎖️ <strong>Naissance du Site-12</strong> :
+      <ul>
+        <li>🛡️ Centre de commandement</li>
+        <li>⚙️ Bastion militaire et scientifique</li>
+        <li>🧬 Pôle de confinement avancé</li>
+      </ul>
+      Il est depuis le dernier bastion de la Fondation SCP.
+      </p>
+    </div>
+
+    <div class="content" id="bienvenue" style="display:none;">
+      <h2>👋 Bienvenue sur le Site-12</h2>
+      <p>Serveur Minecraft RP basé sur l’univers de la Fondation SCP.</p>
+      <p>Explorez les fiches SCP, rapports, journal interne, et participez à une immersion complète dans un véritable site de confinement.</p>
+      <ul>
+        <li>✅ Univers immersif SCP RP</li>
+        <li>🧪 Branches : Scientifique, Sécurité, Maintenance, Communication...</li>
+        <li>🔒 Accès aux documents classifiés pour les agents enregistrés</li>
+      </ul>
+      <p>“Nous sommes la dernière ligne. L’ennemi ne passe pas.”</p>
+    </div>
+  </div>
+  <script>
+    function showContent(id) {
+      document.querySelectorAll('.content').forEach(div => div.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
 </body>
 </html>
