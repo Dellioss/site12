@@ -1,0 +1,56 @@
+
+/* SCP Site-12 - Style Post-Militaire */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+body {
+    background-color: #111;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    font-family: 'Space Mono', monospace;
+    color: #d0d0d0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: #e0e0e0;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.2em;
+    margin-bottom: 1em;
+}
+
+a {
+    color: #8ab4f8;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2em;
+}
+
+.section {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.alert {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 2em 0;
+}
