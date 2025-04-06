@@ -1,36 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Site-12 - Accueil</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Site-12 — Fondation SCP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1 class="title">SITE-12</h1>
-    <div class="blocks">
-      <div class="block" onclick="showContent('histoire')">📜 Histoire du Site-12</div>
-      <div class="block" onclick="showContent('bienvenue')">👋 Bienvenue</div>
-    </div>
-    <div class="content" id="histoire" style="display:none;">
-      <h2>📜 Histoire Officielle</h2>
-      <p>Le Site-12 fut bâti après la chute du Site-22, en réponse à l’attaque de l’Insurrection du Chaos...</p>
-    </div>
-    <div class="content" id="bienvenue" style="display:none;">
-      <h2>👋 Bienvenue</h2>
-      <p>Serveur SCP RP Minecraft. Consultez les rapports, les fiches, et explorez le dernier bastion de la Fondation.</p>
-    </div>
-    <div class="to-branches">
-      <a class="button" href="pages/branches.html">➡️ Voir les branches</a>
-    </div>
-  </div>
-  <script>
-    function showContent(id) {
-      document.querySelectorAll('.content').forEach(div => div.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
-    }
-  </script>
+    <header>
+        <h1>SITE-12</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="branches.html">Branches</a></li>
+                <li><a href="conseil.html">Conseil O6</a></li>
+                <li><a href="archives.html">Archives du Conseil</a></li>
+                <li><a href="journal.html">Journal Interne</a></li>
+                <li><a href="reseau.html">Réseau</a></li>
+                <li><a href="rapport.html">Rapport RP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="bienvenue">
+            <h2>Bienvenue sur le Site-12</h2>
+            <p>Site officiel du serveur Minecraft RP basé sur l’univers de la Fondation SCP.</p>
+            <p>Explorez les fiches, rapports, journal interne et plongez dans l’immersion d’un véritable site de confinement.</p>
+            <p>Rejoignez-nous pour une expérience RP complète, sérieuse, mais fun !</p>
+        </section>
+        <section class="histoire">
+            <h2>📜 Histoire Officielle du Site-12</h2>
+            <p>“L'histoire est un perpétuel recommencement.” – Thucydide</p>
+            <p><strong>Classification :</strong> Niveau 4 - Accès Restreint</p>
+            <p>L’histoire du Site-12 commence dans une période sombre pour la Fondation SCP...</p>
+            <p>... [Texte complet remplacé ici pour simplification]</p>
+        </section>
+    </main>
 </body>
 </html>

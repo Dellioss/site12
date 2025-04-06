@@ -1,53 +1,38 @@
-
 body {
-  background-color: #0c0c0c;
-  color: #e31b1b;
-  font-family: 'Courier New', monospace;
-  margin: 0;
-  padding: 20px;
+    background-color: #111;
+    color: #ddd;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
 }
-.container {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
+header {
+    background-color: #111;
+    border-bottom: 2px solid red;
+    padding: 1rem;
+    text-align: center;
 }
-.title {
-  color: red;
-  font-size: 2.5rem;
-  border-bottom: 2px solid red;
-  padding-bottom: 10px;
+header h1 {
+    color: red;
+    font-size: 2rem;
+    margin: 0;
 }
-.blocks {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-  gap: 40px;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
-.block {
-  border: 2px solid cyan;
-  padding: 15px 30px;
-  cursor: pointer;
-  color: cyan;
-  background-color: #111;
-  transition: background-color 0.3s;
+nav a {
+    color: cyan;
+    text-decoration: none;
 }
-.block:hover {
-  background-color: #222;
+main {
+    padding: 2rem;
 }
-.content {
-  text-align: left;
-  background-color: #111;
-  padding: 20px;
-  border: 1px solid #444;
-  margin-top: 20px;
-  color: white;
+section {
+    margin-bottom: 2rem;
 }
-.button {
-  display: inline-block;
-  margin-top: 20px;
-  background: cyan;
-  color: black;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
+h2 {
+    color: red;
 }
