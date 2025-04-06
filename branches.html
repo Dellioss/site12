@@ -2,133 +2,83 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Branches - Site-12</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #0b0b0b;
-      color: #e0e0e0;
-      font-family: 'Share Tech Mono', monospace;
-      margin: 0;
-    }
-    header {
-      background-color: #111;
-      padding: 20px;
-      border-bottom: 2px solid red;
-    }
-    header h1 {
-      color: red;
-      margin: 0;
-      font-size: 2em;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: cyan;
-      text-decoration: none;
-      padding: 6px 12px;
-      border: 1px solid cyan;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: cyan;
-      color: black;
-    }
-    main {
-      max-width: 1200px;
-      margin: auto;
-      padding: 30px;
-    }
-    .intro {
-      margin-bottom: 40px;
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-left: 4px solid cyan;
-    }
-    h2 {
-      color: red;
-    }
-    .branches-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    .branch-card {
-      background-color: #1a1a1a;
-      border: 2px solid cyan;
-      padding: 20px;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .branch-card:hover {
-      background-color: #222;
-      transform: scale(1.02);
-    }
-    .branch-icon {
-      font-size: 2em;
-    }
-    .branch-title {
-      margin: 10px 0;
-      font-size: 1.2em;
-      color: cyan;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Branches - Site-12</title>
+    <link rel="stylesheet" href="scp-style-military.css">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #00ffff;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1a1a1a;
+            border-bottom: 2px solid red;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: red;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 50px;
+        }
+        .branch {
+            background-color: #1c1c1c;
+            border: 2px solid cyan;
+            border-radius: 8px;
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .branch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px cyan;
+        }
+        .branch-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #00ffff;
+        }
+        .branch-desc {
+            font-size: 0.95em;
+            color: #ccc;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>SITE-12</h1>
-    <nav>
-      <a href="../index.html">Accueil</a>
-      <a href="branches.html">Branches</a>
-      <a href="conseil.html">Conseil O6</a>
-      <a href="archives.html">Archives</a>
-      <a href="journal.html">Journal</a>
-      <a href="reseau.html">Réseau</a>
-      <a href="rapport.html">Rapports RP</a>
-    </nav>
-  </header>
-  <main>
-    <section class="intro">
-      <h2>📌 Branches Opérationnelles du Site-12</h2>
-      <p>Choisissez votre affectation. Chaque branche possède ses propres rôles, fonctions et responsabilités au sein du Site-12. Cliquez pour en savoir plus.</p>
-    </section>
-
-    <div class="branches-grid">
-      <div class="branch-card" onclick="location.href='scientifique.html'">
-        <div class="branch-icon">🔬</div>
-        <div class="branch-title">Scientifique</div>
-        <p>Tests, recherches, analyses et expériences sur les entités SCP.</p>
-      </div>
-      <div class="branch-card" onclick="location.href='securite.html'">
-        <div class="branch-icon">🛡️</div>
-        <div class="branch-title">Sécurité</div>
-        <p>Surveillance, intervention tactique et confinement de niveau critique.</p>
-      </div>
-      <div class="branch-card" onclick="location.href='maintenance.html'">
-        <div class="branch-icon">⚙️</div>
-        <div class="branch-title">Maintenance</div>
-        <p>Support technique, infrastructures, réparations et logistique.</p>
-      </div>
-      <div class="branch-card" onclick="location.href='administration.html'">
-        <div class="branch-icon">🧾</div>
-        <div class="branch-title">Administrative</div>
-        <p>Gestion du site, protocoles, budget, conseil et orientation stratégique.</p>
-      </div>
-      <div class="branch-card" onclick="location.href='communication.html'">
-        <div class="branch-icon">📣</div>
-        <div class="branch-title">Communication</div>
-        <p>Transmission d'informations, alertes, journal et coordination RP.</p>
-      </div>
+    <header>
+        <h1>Branches Opérationnelles du Site-12</h1>
+    </header>
+    <div class="container">
+        <a href="branches/branche-scientifique.html" class="branch">
+            <div class="branch-title">🔬 Scientifique</div>
+            <div class="branch-desc">Recherche, tests, documentation SCP.</div>
+        </a>
+        <a href="branches/branche-securite.html" class="branch">
+            <div class="branch-title">🛡️ Sécurité</div>
+            <div class="branch-desc">Surveillance, intervention et protection du site.</div>
+        </a>
+        <a href="branches/branche-maintenance.html" class="branch">
+            <div class="branch-title">⚙️ Maintenance</div>
+            <div class="branch-desc">Support technique, infrastructures, énergie.</div>
+        </a>
+        <a href="branches/branche-gestion.html" class="branch">
+            <div class="branch-title">🧾 Gestion Générale</div>
+            <div class="branch-desc">Direction, organisation, administration O6.</div>
+        </a>
+        <a href="branches/branche-communication.html" class="branch">
+            <div class="branch-title">📣 Communication</div>
+            <div class="branch-desc">Journal RP, relais radio, messagerie interne.</div>
+        </a>
     </div>
-  </main>
 </body>
 </html>
