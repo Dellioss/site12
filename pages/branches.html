@@ -1,1 +1,41 @@
-<h1>Branches Opérationnelles</h1><p>Page en construction.</p>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Branches - Site-12</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding-top: 30px;
+    }
+    .branch-card {
+      background-color: #111;
+      padding: 20px;
+      border: 2px solid cyan;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .branch-card:hover {
+      background-color: #222;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Branches du Site-12</h1>
+    <div class="branch-grid">
+      <a class="branch-card" href="branche-scientifique.html">🔬 Scientifique</a>
+      <a class="branch-card" href="branche-securite.html">🛡️ Sécurité</a>
+      <a class="branch-card" href="branche-maintenance.html">🔧 Maintenance</a>
+      <a class="branch-card" href="branche-gestion.html">🗂️ Gestion Générale</a>
+      <a class="branch-card" href="branche-communication.html">📡 Communication</a>
+    </div>
+  </div>
+</body>
+</html>
