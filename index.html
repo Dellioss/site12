@@ -3,7 +3,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Site-12 | Accueil</title>
+  <title>Site-12 | Accueil Fusionné</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     html, body {
@@ -36,19 +36,13 @@
       100% { background-position-y: 100%; }
     }
 
-    main {
-      position: relative;
-      z-index: 1;
-      padding: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
     header {
       background-color: #111;
       padding: 20px;
       text-align: center;
       border-bottom: 2px solid #00ffff;
+      z-index: 1;
+      position: relative;
     }
 
     header h1 {
@@ -56,22 +50,53 @@
       margin: 0;
     }
 
-    nav {
-      background-color: #111;
-      text-align: center;
-      padding: 10px;
-      border-bottom: 2px solid #00ffff;
-    }
-
-    nav a {
-      color: #00ffff;
-      margin: 0 15px;
-      text-decoration: none;
+    #toggleSidebar {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: #00ffff;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
       font-weight: bold;
+      z-index: 1001;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    nav#sidebar {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 2rem 1rem;
+      transition: left 0.3s ease;
+      border-right: 2px solid #00ffff;
+      z-index: 1000;
+    }
+
+    nav#sidebar.open {
+      left: 0;
+    }
+
+    nav#sidebar a {
+      display: block;
+      color: #00ffff;
+      margin: 1rem 0;
+      text-decoration: none;
+    }
+
+    nav#sidebar a:hover {
+      color: white;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     section {
@@ -97,17 +122,26 @@
   </style>
 </head>
 <body>
+  <div id="toggleSidebar">&#9654;</div>
+  <nav id="sidebar">
+    <div class="category">RP</div>
+    <a href="accueil-rp.html">Accueil RP</a>
+    <a href="branches.html">Branches Opérationnelles</a>
+    <a href="groupes.html">Groupes d'intérêt</a>
+    <a href="historique.html">Historique</a>
+    <a href="message-o1.html">Message du O-1</a>
+    <div class="category">HRP</div>
+    <a href="projet-hrp.html">Projet HRP</a>
+    <a href="charte.html">Charte</a>
+    <a href="debuter.html">Débuter</a>
+    <a href="recrutement.html">Recrutement</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <header>
     <h1>SITE-12 — ACCUEIL</h1>
   </header>
-  <nav>
-    <a href="branches.html">Branches</a>
-    <a href="conseil.html">Conseil</a>
-    <a href="archives.html">Archives</a>
-    <a href="journal.html">Journal</a>
-    <a href="reseau.html">Réseau</a>
-    <a href="rapport.html">Rapports RP</a>
-  </nav>
+
   <main>
     <section>
       <h2>Bienvenue sur le Site-12</h2>
@@ -158,5 +192,11 @@
       <p class="quote">“Nous sommes la dernière ligne. L’ennemi ne passe pas.” — Oméga-1</p>
     </section>
   </main>
+
+  <script>
+    document.getElementById('toggleSidebar').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
