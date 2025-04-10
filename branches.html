@@ -1,31 +1,177 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Branches - Site-12</title>
-  <link rel="stylesheet" href="styles/branches.css">
+  <title>Branches Opérationnelles - Site-12</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background-color: #000;
+      color: #00ffff;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0,255,255,0.04),
+        rgba(0,255,255,0.04) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      animation: scan 12s linear infinite;
+      z-index: 0;
+    }
+    @keyframes scan {
+      0% { background-position-y: 0; }
+      100% { background-position-y: 100%; }
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background-color: rgba(0, 0, 0, 0.9);
+      border-bottom: 2px solid #00ffff;
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00ffff;
+      text-shadow: 0 0 5px #00ffff;
+    }
+    #toggleSidebar {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: #00ffff;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 1001;
+    }
+    nav#sidebar {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 2rem 1rem;
+      transition: left 0.3s ease;
+      border-right: 2px solid #00ffff;
+      z-index: 1000;
+    }
+    nav#sidebar.open {
+      left: 0;
+    }
+    nav#sidebar a {
+      display: block;
+      color: #00ffff;
+      margin: 1rem 0;
+      text-decoration: none;
+    }
+    nav#sidebar a:hover {
+      color: white;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
+    .branches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .branch-card {
+      background: rgba(0, 255, 255, 0.07);
+      border: 1px solid #00ffff;
+      border-left: 5px solid #00ffff;
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s, border-left-color 0.3s;
+      text-decoration: none;
+      color: #00ffff;
+    }
+    .branch-card:hover {
+      transform: translateY(-5px);
+      border-left-color: white;
+    }
+    .branch-title {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      color: white;
+      text-shadow: 0 0 3px #00ffff;
+    }
+    .branch-desc {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
+  <div id="toggleSidebar">&#9654;</div>
+  <nav id="sidebar">
+    <a href="index.html">Accueil</a>
+    <a href="accueil-rp.html">Accueil RP</a>
+    <a href="groupes.html">Groupes d'intérêt</a>
+    <a href="historique.html">Historique</a>
+    <a href="message-o1.html">Message du O-1</a>
+    <hr style="border-color: #00ffff;">
+    <a href="projet-hrp.html">Projet HRP</a>
+    <a href="charte.html">Charte</a>
+    <a href="debuter.html">Débuter</a>
+    <a href="recrutement.html">Recrutement</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <header>
-    <h1>SITE-12 – BRANCHES OPÉRATIONNELLES</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="conseil.html">Conseil</a>
-      <a href="archives.html">Archives</a>
-      <a href="journal.html">Journal</a>
-      <a href="reseau.html">Réseau</a>
-      <a href="rapport.html">Rapports RP</a>
-    </nav>
+    <h1>BRANCHES OPÉRATIONNELLES DU SITE-12</h1>
   </header>
 
   <main>
-    <section class="branches-grid">
-      <a href="branches/branche-scientifique.html" class="branch-card scientifique">🔬 Scientifique</a>
-      <a href="branches/branche-securite.html" class="branch-card securite">🛡 Sécurité</a>
-      <a href="branches/branche-maintenance.html" class="branch-card maintenance">⚙ Maintenance</a>
-      <a href="branches/branche-gestion.html" class="branch-card gestion">📂 Gestion Générale</a>
-      <a href="branches/branche-communication.html" class="branch-card communication">📣 Communication</a>
-    </section>
+    <div class="branches-grid">
+      <a href="branches/branche-scientifique.html" class="branch-card">
+        <div class="branch-title">🔬 Scientifique</div>
+        <div class="branch-desc">Ils manipulent l'inexplicable pour comprendre l'incompréhensible. Tests SCP, autopsies, développement de théories et gestion d'anomalies.</div>
+      </a>
+      <a href="branches/branche-securite.html" class="branch-card">
+        <div class="branch-title">🛡 Sécurité</div>
+        <div class="branch-desc">Gardes, forces spéciales, escorte de classe D, équipes d'intervention d'urgence. Vous êtes l'élite armée du Site-12.</div>
+      </a>
+      <a href="branches/branche-maintenance.html" class="branch-card">
+        <div class="branch-title">⚙ Maintenance</div>
+        <div class="branch-desc">Lumière, réseau, portes blindées, systèmes de confinement automatisés. L’ombre technique qui assure la survie du Site.</div>
+      </a>
+      <a href="branches/branche-gestion.html" class="branch-card">
+        <div class="branch-title">📂 Gestion Générale</div>
+        <div class="branch-desc">Organisation RH, gestion du personnel, administration, missions O6. Les cerveaux administratifs en soutien au commandement.</div>
+      </a>
+      <a href="branches/branche-communication.html" class="branch-card">
+        <div class="branch-title">📣 Communication</div>
+        <div class="branch-desc">Journal officiel, censure des fuites, diffusion contrôlée des messages internes et publics. Vous gérez l’image, et plus encore.</div>
+      </a>
+    </div>
   </main>
+
+  <script>
+    document.getElementById('toggleSidebar').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
