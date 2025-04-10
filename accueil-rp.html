@@ -2,28 +2,61 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Accueil-rp</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Accueil RP - Site-12</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: #000 url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #00ffcc;
+      font-family: 'Share Tech Mono', monospace;
+      background-color: #000;
+      color: #00ffff;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0,255,255,0.04),
+        rgba(0,255,255,0.04) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      animation: scan 12s linear infinite;
+      z-index: 0;
+    }
+    @keyframes scan {
+      0% { background-position-y: 0; }
+      100% { background-position-y: 100%; }
     }
     header {
-      background: rgba(0, 0, 0, 0.85);
+      background-color: rgba(0, 0, 0, 0.9);
       padding: 2rem;
       text-align: center;
-      border-bottom: 2px solid #00ffcc;
+      border-bottom: 2px solid #00ffff;
+      z-index: 1;
+      position: relative;
     }
     h1 {
       margin: 0;
       font-size: 2.5rem;
-      text-shadow: 0 0 5px #00ffcc;
+      color: #00ffff;
+      text-shadow: 0 0 5px #00ffff;
+    }
+    #toggleSidebar {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: #00ffff;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 1001;
     }
     nav#sidebar {
       position: fixed;
@@ -34,7 +67,7 @@
       background: rgba(0, 0, 0, 0.95);
       padding: 2rem 1rem;
       transition: left 0.3s ease;
-      border-right: 2px solid #00ffcc;
+      border-right: 2px solid #00ffff;
       z-index: 1000;
     }
     nav#sidebar.open {
@@ -42,63 +75,48 @@
     }
     nav#sidebar a {
       display: block;
-      color: #00ffcc;
+      color: #00ffff;
       margin: 1rem 0;
       text-decoration: none;
     }
     nav#sidebar a:hover {
       color: white;
     }
-    #toggleSidebar {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      background: #00ffcc;
-      color: #000;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      z-index: 1001;
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 2rem;
+      position: relative;
+      z-index: 1;
     }
     section {
-      padding: 2rem;
-      max-width: 1100px;
-      margin: auto;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid #00ffff;
+      padding: 1.5rem;
       margin-bottom: 2rem;
-      border: 1px solid #00ffcc;
-      border-radius: 8px;
+      border-radius: 6px;
     }
     h2 {
-      color: #00ffaa;
-      border-bottom: 1px solid #00ffaa;
-      padding-bottom: 0.5rem;
-    }
-    .section-content {
-      margin-top: 1rem;
-      line-height: 1.6;
-    }
-    .category {
-      margin-top: 2rem;
-      font-size: 1.3rem;
-      text-transform: uppercase;
+      margin-top: 0;
       color: #00ffff;
-      border-bottom: 2px solid #00ffff;
+      text-shadow: 0 0 3px #00ffff;
+      border-bottom: 1px solid #00ffff;
       padding-bottom: 0.5rem;
+    }
+    p {
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
   <div id="toggleSidebar">&#9654;</div>
   <nav id="sidebar">
-    <div class="category">RP</div>
-    <a href="accueil-rp.html">Accueil RP</a>
+    <a href="index.html">Accueil</a>
     <a href="branches.html">Branches Opérationnelles</a>
     <a href="groupes.html">Groupes d'intérêt</a>
     <a href="historique.html">Historique</a>
     <a href="message-o1.html">Message du O-1</a>
-    <div class="category">HRP</div>
+    <hr style="border-color: #00ffff;">
     <a href="projet-hrp.html">Projet HRP</a>
     <a href="charte.html">Charte</a>
     <a href="debuter.html">Débuter</a>
@@ -107,15 +125,27 @@
   </nav>
 
   <header>
-    <h1>Accueil rp</h1>
+    <h1>ACCUEIL RP - SITE-12</h1>
   </header>
 
-  <section>
-    <h2>Accueil rp</h2>
-    <div class="section-content">
-      <p>Bienvenue au Site-12, centre névralgique de la Fondation SCP. Confidentialité absolue requise.</p>
-    </div>
-  </section>
+  <main>
+    <section>
+      <h2>Bienvenue sur le Site-12</h2>
+      <p>
+        Vous entrez dans la zone sécurisée du Site-12, centre névralgique de la Fondation SCP.
+        Cette page RP est destinée à vous immerger dans l’univers officiel de la base.
+      </p>
+      <p>
+        📍 <strong>Classification :</strong> Niveau 3 - Accès restreint<br>
+        📜 <strong>Contexte :</strong> post-effondrement du Site-22, activation du protocole Omega-1<br>
+        🚨 <strong>État :</strong> confinement standard, surveillance active
+      </p>
+      <p>
+        Préparez-vous à découvrir les branches, rôles, fiches et rapports RP liés à votre affectation.
+        Confidentialité absolue requise.
+      </p>
+    </section>
+  </main>
 
   <script>
     document.getElementById('toggleSidebar').addEventListener('click', () => {
