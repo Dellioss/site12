@@ -22,7 +22,24 @@
     p { line-height: 1.6; }
   </style>
 </head>
-<body>
+
+  <body>
+    <div id="toggleSidebar">&#9654;</div>
+    <nav id="sidebar">
+      <a href="index.html">Accueil</a>
+      <a href="acces-site12.html">🛰️ Accès Site-12</a>
+      <a href="branches.html">Branches Opérationnelles</a>
+      <a href="groupes.html">Groupes d'intérêt</a>
+      <a href="historique.html">Historique</a>
+      <a href="message-o1.html">Message du O-1</a>
+      <hr style="border-color: #00ffff;">
+      <a href="projet-hrp.html">Projet HRP</a>
+      <a href="charte.html">Charte</a>
+      <a href="debuter.html">Débuter</a>
+      <a href="recrutement.html">Recrutement</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  
   <header>
     <h1>🛰️ ACCÈS SITE-12</h1>
   </header>
@@ -71,5 +88,11 @@
       <p><em>“Nous sommes la dernière ligne. L’ennemi ne passe pas.” — Oméga-1</em></p>
     </section>
   </main>
+
+  <script>
+    document.getElementById('toggleSidebar').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
