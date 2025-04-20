@@ -3,12 +3,31 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Archives SCP - Fondation</title>
-  <link rel="stylesheet" href="assets/css/archives_v2.css">
+  <title>Archives SCP - Filtrage Dynamique</title>
+  <link rel="stylesheet" href="assets/css/archives_filter.css">
+  <script src="assets/js/archives_filter.js" defer></script>
 </head>
 <body>
-  <h1 class="center-title">📂 Archives SCP — Dossiers Sécurisés</h1>
-  <div class="scp-gallery">
+  <h1 class="center-title">📂 Archives SCP — Classées par Type</h1>
+
+  <div class="filter-buttons">
+    <button class="filter-btn active" onclick="filterSCP('all')">Tous</button>
+    <button class="filter-btn" onclick="filterSCP('safe')">SAFE</button>
+    <button class="filter-btn" onclick="filterSCP('euclid')">EUCLID</button>
+    <button class="filter-btn" onclick="filterSCP('keter')">KETER</button>
+  </div>
+
+  <div class="scp-gallery" id="scp-gallery">
+    <div class="scp-card safe">
+      <div class="scp-header">
+        <span class="scp-code">SCP-500</span>
+        <span class="scp-class safe">SAFE</span>
+      </div>
+      <img src="assets/img/scp500.png" alt="SCP-500" class="scp-thumb">
+      <h3>Pilules rouges</h3>
+      <p>Guérison instantanée. Flacon contenant des pilules aux propriétés régénératrices.</p>
+      <a href="assets/pdf/scp500.pdf" target="_blank" class="button">🔎 Dossier complet</a>
+    </div>
     <div class="scp-card keter">
       <div class="scp-header">
         <span class="scp-code">SCP-173</span>
@@ -16,30 +35,8 @@
       </div>
       <img src="assets/img/scp173.png" alt="SCP-173" class="scp-thumb">
       <h3>La Statue</h3>
-      <p>Entité en béton animée. Tue en brisant la nuque. Bouge uniquement hors vue directe.</p>
+      <p>Tue en brisant la nuque. Ne bouge que si non observée.</p>
       <a href="assets/pdf/scp173.pdf" target="_blank" class="button">🔎 Dossier complet</a>
-    </div>
-
-    <div class="scp-card euclid">
-      <div class="scp-header">
-        <span class="scp-code">SCP-049</span>
-        <span class="scp-class euclid">EUCLID</span>
-      </div>
-      <img src="assets/img/scp049.png" alt="SCP-049" class="scp-thumb">
-      <h3>Le Docteur</h3>
-      <p>Humanoïde masqué se proclamant médecin. Tue au toucher, prétend guérir la "peste".</p>
-      <a href="assets/pdf/scp049.pdf" target="_blank" class="button">🔎 Dossier complet</a>
-    </div>
-
-    <div class="scp-card keter">
-      <div class="scp-header">
-        <span class="scp-code">SCP-096</span>
-        <span class="scp-class keter">KETER</span>
-      </div>
-      <img src="assets/img/scp096.png" alt="SCP-096" class="scp-thumb">
-      <h3>Le Timide</h3>
-      <p>Attaque toute personne ayant vu son visage. Poursuit jusqu'à élimination.</p>
-      <a href="assets/pdf/scp096.pdf" target="_blank" class="button">🔎 Dossier complet</a>
     </div>
   </div>
 </body>

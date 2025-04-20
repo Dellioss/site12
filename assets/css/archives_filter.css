@@ -1,0 +1,72 @@
+
+body {
+  margin: 0;
+  padding: 2rem;
+  background: #0b0b0b;
+  font-family: 'Orbitron', sans-serif;
+  color: #eee;
+}
+.center-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.filter-btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: #ff0033;
+}
+.scp-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.scp-card {
+  width: 300px;
+  background: #111;
+  border-radius: 10px;
+  padding: 1.2rem;
+  border: 2px solid #333;
+}
+.scp-card.keter { border-color: #ff0033; }
+.scp-card.euclid { border-color: #ffcc00; }
+.scp-card.safe { border-color: #00cc66; }
+.scp-card .scp-thumb {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+.scp-class {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #000;
+  font-weight: bold;
+}
+.scp-class.keter { background: #ff0033; }
+.scp-class.euclid { background: #ffcc00; }
+.scp-class.safe { background: #00cc66; }
+.button {
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 8px 12px;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
