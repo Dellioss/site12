@@ -1,1 +1,1 @@
-# Site SCP - README
+# Site SCP pour GitHub Pages – Site-12 Minecraft RP

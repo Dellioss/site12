@@ -1,1 +1,0 @@
-<?php /* Formulaire de contact */ ?>

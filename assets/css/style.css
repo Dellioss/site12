@@ -1,1 +1,39 @@
-/* CSS principal */
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #0b0b0b;
+  color: #e0e0e0;
+}
+.intro {
+  text-align: center;
+  padding: 10% 5%;
+}
+.login-container {
+  text-align: center;
+  margin-top: 20%;
+}
+input, button {
+  padding: 10px;
+  font-size: 1.2em;
+  margin: 5px;
+}
+.btn {
+  display: inline-block;
+  background: #d00;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.branches-list li {
+  padding: 10px;
+  margin: 5px 0;
+  background: #222;
+}
+.branches-list .admin { color: red; }
+.branches-list .classe-d { color: orange; }
+.branches-list .medical { color: pink; }
+.branches-list .scientifique { color: green; }
+.branches-list .securite { color: blue; }
