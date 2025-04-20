@@ -1,1 +1,19 @@
-<!-- Terminal RP interactif à venir -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Terminal Site-12</title>
+  <link rel="stylesheet" href="assets/css/terminal.css">
+</head>
+<body onload="bootSystem()">
+  <div id="terminal">
+    <div id="output"></div>
+    <div id="input-line">
+      <span class="prompt">&gt;</span>
+      <input type="text" id="command" autofocus autocomplete="off" onkeydown="handleCommand(event)">
+    </div>
+  </div>
+  <script src="assets/js/terminal.js"></script>
+</body>
+</html>
