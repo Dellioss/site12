@@ -5,12 +5,47 @@
   <meta charset="UTF-8">
   <title>Site-12 | Fondation SCP</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <div class="intro">
-    <h1>Bienvenue sur le portail sécurisé du Site-12</h1>
-    <p class="subtitle">Intranet de la Fondation SCP - Accès réservé</p>
-    <a href="login.html" class="btn">Se connecter</a>
+  <div class="intro-screen" id="intro">
+    <div class="intro-text" id="intro-text">
+      <p>Initialisation du système...</p>
+      <p>Analyse des accès...</p>
+      <p>Connexion sécurisée au Site-12...</p>
+    </div>
+    <button onclick="skipIntro()" class="skip-btn">Entrer</button>
+  </div>
+
+  <div class="main-content" id="main-content" style="display:none;">
+    <header>
+      <h1 class="glitch" data-text="SITE-12">SITE-12</h1>
+      <p class="subtitle">Portail Intranet Sécurisé - Fondation SCP</p>
+    </header>
+
+    <section class="presentation">
+      <p>
+        Ce site est une extension numérique du Site-12, centre de confinement de classe ██ situé en zone ███████.
+        Toute tentative d'accès non autorisé sera consignée. Niveau de clearance minimum requis : Niveau 3.
+      </p>
+      <p class="code">"Sécurité, Surveillance, Contrôle"</p>
+    </section>
+
+    <section class="navigation">
+      <div class="nav-grid">
+        <a href="branches.html" class="nav-tile">🧪 Branches SCP</a>
+        <a href="terminal.html" class="nav-tile">🛰️ Terminal RP</a>
+        <a href="serveur.html" class="nav-tile">📡 Serveur Minecraft</a>
+        <a href="recrutement.html" class="nav-tile">🧍 Recrutement / Classe D</a>
+        <a href="archives.html" class="nav-tile">📦 Archives SCP</a>
+        <a href="faq.html" class="nav-tile">❓ FAQ / Contact</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>Fondation SCP - SITE-12 — Tous droits réservés</p>
+      <p>Connexion supervisée par le Conseil O5 — Clearance 3+</p>
+    </footer>
   </div>
 </body>
 </html>

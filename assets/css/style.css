@@ -2,38 +2,76 @@
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: #0b0b0b;
+  background: #0a0a0a;
   color: #e0e0e0;
 }
-.intro {
-  text-align: center;
-  padding: 10% 5%;
+.intro-screen {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: black;
+  color: lime;
+  font-family: monospace;
+  padding: 20vh 10vw;
 }
-.login-container {
-  text-align: center;
-  margin-top: 20%;
-}
-input, button {
-  padding: 10px;
-  font-size: 1.2em;
-  margin: 5px;
-}
-.btn {
-  display: inline-block;
-  background: #d00;
+.skip-btn {
+  margin-top: 2rem;
   padding: 10px 20px;
+  background: red;
   color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.glitch {
+  font-size: 3em;
+  position: relative;
+}
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+}
+.glitch::before {
+  color: red;
+  animation: glitch 1s infinite;
+}
+.glitch::after {
+  color: blue;
+  animation: glitch 0.5s infinite;
+}
+@keyframes glitch {
+  0% { left: -2px; }
+  50% { left: 2px; }
+  100% { left: -2px; }
+}
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+.nav-tile {
+  background: #111;
+  border: 2px solid #d00;
+  padding: 1.5rem;
+  text-align: center;
   text-decoration: none;
+  color: #eee;
   font-weight: bold;
-  border-radius: 5px;
+  transition: 0.3s;
 }
-.branches-list li {
-  padding: 10px;
-  margin: 5px 0;
-  background: #222;
+.nav-tile:hover {
+  background: #d00;
+  color: white;
 }
-.branches-list .admin { color: red; }
-.branches-list .classe-d { color: orange; }
-.branches-list .medical { color: pink; }
-.branches-list .scientifique { color: green; }
-.branches-list .securite { color: blue; }
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9em;
+  background: #111;
+  border-top: 1px solid #333;
+}

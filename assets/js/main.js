@@ -1,10 +1,8 @@
 
-function checkPassword() {
-  const input = document.getElementById('password').value;
-  const error = document.getElementById('error');
-  if (input.toLowerCase() === "site 12") {
-    window.location.href = "index.html";
-  } else {
-    error.innerText = "Mot de passe incorrect.";
-  }
+function skipIntro() {
+  document.getElementById("intro").style.display = "none";
+  document.getElementById("main-content").style.display = "block";
+}
+window.onload = function() {
+  setTimeout(skipIntro, 7000);
 }
