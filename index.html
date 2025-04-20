@@ -1,188 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Site-12 - Accès Principal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Share Tech Mono', monospace;
-      background-color: #000;
-      color: #00ffff;
-      overflow-x: hidden;
-      margin-left: 260px;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: repeating-linear-gradient(to bottom, rgba(0,255,255,0.02), rgba(0,255,255,0.02) 1px, transparent 1px, transparent 3px);
-      animation: scan 12s linear infinite;
-      z-index: 0;
-    }
-    @keyframes scan { 0% { background-position-y: 0; } 100% { background-position-y: 100%; } }
-    #sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 250px;
-      height: 100%;
-      background-color: #000;
-      border-right: 2px solid #00ffff;
-      padding: 1rem;
-      z-index: 1000;
-    }
-    .sidebar-header {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .play-button {
-      background-color: #00ffff;
-      width: 40px;
-      height: 40px;
-      border-radius: 5px;
-      font-size: 25px;
-      color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: auto;
-      font-weight: bold;
-    }
-    .section-title {
-      color: #00ffff;
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      border-bottom: 2px solid #00ffff;
-    }
-    .sidebar-nav {
-      list-style: none;
-      margin-top: 0.5rem;
-      padding-left: 0;
-    }
-    .sidebar-nav li {
-      margin: 0.6rem 0;
-    }
-    .sidebar-nav a {
-      color: #00ffff;
-      text-decoration: none;
-      font-weight: bold;
-      display: block;
-    }
-    .sidebar-nav a:hover {
-      text-shadow: 0 0 5px #00ffff;
-    }
-    .content {
-      padding: 3rem 2rem;
-    }
-    h1 {
-      font-size: 2.8rem;
-      color: #00ffff;
-      text-align: center;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 5px #00ffff;
-    }
-    p {
-      max-width: 900px;
-      margin: 1rem auto;
-      font-size: 1.1rem;
-      color: #aaffff;
-      text-align: center;
-    }
-    section {
-      border: 1px solid #00ffff;
-      border-radius: 10px;
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 1000px;
-      background-color: rgba(0, 255, 255, 0.05);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-    .box {
-      background: rgba(0,0,0,0.6);
-      border: 1px solid #00ffff;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .box h3 {
-      margin-bottom: 0.5rem;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 3rem;
-    }
-    .cta a {
-      background: #00ffff;
-      color: black;
-      font-weight: bold;
-      padding: 1rem 2rem;
-      margin: 0.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-    }
-    .cta a:hover {
-      background: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Site-12 - Accueil</title>
 </head>
 <body>
-<nav id="sidebar">
-  <div class="sidebar-header">
-    <div class="play-button">▶</div>
-  </div>
-  <h2 class="section-title">RP</h2>
-  <ul class="sidebar-nav">
-    <li><a href="pages/index.html">🛰️ Accès Principal</a></li>
-    <li><a href="pages/acces-site12.html">🛰️ Accès Site-12</a></li>
-    <li><a href="pages/branches.html">Branches Opérationnelles</a></li>
-    <li><a href="pages/groupes.html">Groupes d’intérêt</a></li>
-    <li><a href="pages/message.html">Message du O-1</a></li>
-  </ul>
-  <h2 class="section-title">HRP</h2>
-  <ul class="sidebar-nav">
-    <li><a href="pages/projet-hrp.html">Projet HRP</a></li>
-    <li><a href="pages/charte.html">Charte</a></li>
-    <li><a href="pages/debuter.html">Débuter</a></li>
-    <li><a href="pages/recrutement.html">Recrutement</a></li>
-    <li><a href="pages/contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<div class="content">
-  <h1>Bienvenue sur le Site-12</h1>
-  <p>Projet Minecraft RP inspiré de la Fondation SCP. Vivez une expérience immersive, sérieuse et stylisée dans un véritable site de confinement.</p>
-
-  <section>
-    <h2>🔎 Présentation du projet</h2>
-    <p>Le Site-12 est un serveur Minecraft RP structuré autour de l’univers SCP, conçu pour offrir une progression claire à travers un système de grades, de rôles, de missions et de branches opérationnelles. Il combine immersion militaire, atmosphère sombre, et interactions complexes entre factions.</p>
-  </section>
-
-  <section>
-    <h2>🛠️ Fonctionnalités principales</h2>
-    <div class="grid">
-      <div class="box"><h3>📋 Fiches dynamiques</h3><p>Création et gestion de fiches RP avec rôles, historiques et affectations</p></div>
-      <div class="box"><h3>💻 Terminal sécurisé</h3><p>Accès restreint à des journaux internes, rapports et fichiers classifiés</p></div>
-      <div class="box"><h3>🛰 Interface immersive</h3><p>Design post-militaire, fond scanné, ambiance sonore RP</p></div>
-      <div class="box"><h3>🧭 Carte interactive</h3><p>Zones cliquables, fiches géolocalisées, missions & surveillance</p></div>
-      <div class="box"><h3>🔗 Discord synchronisé</h3><p>Fiches liées aux pseudos Discord, rôles auto, alertes in-game</p></div>
-      <div class="box"><h3>🎯 Progression par branche</h3><p>Grades personnalisés par branche, hiérarchie claire, accès par niveau</p></div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <h2>📮 Prêt à rejoindre l’aventure ?</h2>
-    <a href="pages/recrutement.html">🔎 Postuler maintenant</a>
-    <a href="https://discord.gg/" target="_blank">💬 Rejoindre le Discord</a>
-  </section>
-</div>
+    <nav>
+        <ul>
+            <li><a href="pages/acces-site12.html">Accès Site-12</a></li>
+            <li><a href="pages/branches.html">Branches Opérationnelles</a></li>
+            <li><a href="pages/groupes.html">Groupes d'intérêt</a></li>
+            <li><a href="pages/historique.html">Historique</a></li>
+            <li><a href="pages/message-o1.html">Message du O-1</a></li>
+            <li><a href="pages/hrp.html">Projet HRP</a></li>
+            <li><a href="pages/charte.html">Charte</a></li>
+            <li><a href="pages/debuter.html">Débuter</a></li>
+            <li><a href="pages/recrutement.html">Recrutement</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Bienvenue sur Site-12</h1>
+    <p>Site RP inspiré de l'univers SCP.</p>
 </body>
 </html>
