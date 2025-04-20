@@ -8,7 +8,7 @@ Bienvenue sur l'intranet du **Site-12**, dernier bastion de la Fondation SCP.
 - Générateur de rapports et journal interne
 - Interface admin (O5 seulement)
 
-🔗 [Accéder au site](https://dellioss.github.io/site12/)
+🔗 [Accéder au site](https://dellioss.github.io/site12/index.html)
 
 ---
 
