@@ -1,116 +1,26 @@
-
+<!-- Interface admin secrète -->
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin - Gestion des Rôles</title>
-  <style>
-    body { background-color: #121212; color: white; font-family: Arial, sans-serif; padding: 2rem; }
-    h1 { color: #d40000; }
-    h2 { margin-top: 1.5rem; }
-    .form-group { margin-bottom: 1rem; }
-    label { display: block; margin-bottom: 0.5rem; }
-    input, select { width: 100%; padding: 0.8rem; border-radius: 4px; border: 1px solid #444; background-color: #222; color: white; }
-    button { background-color: #d40000; color: white; padding: 1rem; border: none; border-radius: 4px; cursor: pointer; }
-    button:hover { background-color: #a30000; }
-    .container { max-width: 800px; margin: 0 auto; }
-    .role-table { width: 100%; margin-top: 1rem; border-collapse: collapse; }
-    .role-table th, .role-table td { border: 1px solid #555; padding: 0.6rem; text-align: left; }
-    .role-table th { background-color: #222; color: #fff; }
-    .confidential { font-style: italic; color: #999; }
-  </style>
-</head>
+<html lang='fr'>
+<head><meta charset='UTF-8'><title>Admin</title></head>
 <body>
-  <div class="container">
-    <h1>Admin - Gestion des Rôles</h1>
-    <p>Ajoutez, modifiez ou supprimez des rôles pour la branche <strong>Sécuritaire</strong></p>
 
-    <h2>Ajouter un nouveau rôle ou membre</h2>
-    <form id="roleForm">
-      <div class="form-group">
-        <label for="roleName">Nom du rôle :</label>
-        <input type="text" id="roleName" placeholder="Ex : Agent de terrain">
-      </div>
-      <div class="form-group">
-        <label for="rolePost">Poste :</label>
-        <input type="text" id="rolePost" placeholder="Ex : Tigris, responsable terrain">
-      </div>
-      <div class="form-group">
-        <label for="roleStatus">Statut :</label>
-        <select id="roleStatus">
-          <option value="Active">Actif</option>
-          <option value="Classified">Classifié</option>
-        </select>
-      </div>
-      <button type="submit">Ajouter / Modifier le rôle</button>
-    </form>
-
-    <h2>Rôles actuels de la Branche Sécuritaire</h2>
-    <table class="role-table" id="rolesTable">
-      <thead>
-        <tr>
-          <th>Nom RP</th>
-          <th>Poste</th>
-          <th>Statut</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Liste des rôles ici -->
-      </tbody>
-    </table>
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <a href="index.html"><img src="assets/logo.png" alt="Site-12" class="logo" /></a>
   </div>
-
-  <script>
-    // Sauvegarde et gestion des rôles
-    let roles = JSON.parse(localStorage.getItem('securiteRoles')) || [];
-
-    const roleForm = document.getElementById('roleForm');
-    const rolesTable = document.getElementById('rolesTable').getElementsByTagName('tbody')[0];
-
-    // Afficher les rôles dans le tableau
-    function renderRoles() {
-      rolesTable.innerHTML = '';
-      roles.forEach((role, index) => {
-        const row = rolesTable.insertRow();
-        row.innerHTML = `
-          <td>${role.name}</td>
-          <td>${role.post}</td>
-          <td>${role.status}</td>
-          <td><button onclick="deleteRole(${index})">Supprimer</button></td>
-        `;
-      });
-    }
-
-    // Ajouter ou modifier un rôle
-    roleForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const name = document.getElementById('roleName').value;
-      const post = document.getElementById('rolePost').value;
-      const status = document.getElementById('roleStatus').value;
-
-      if (name && post) {
-        const role = { name, post, status };
-        roles.push(role);
-        localStorage.setItem('securiteRoles', JSON.stringify(roles));
-        renderRoles();
-        roleForm.reset();
-      } else {
-        alert("Tous les champs doivent être remplis !");
-      }
-    });
-
-    // Supprimer un rôle
-    function deleteRole(index) {
-      roles.splice(index, 1);
-      localStorage.setItem('securiteRoles', JSON.stringify(roles));
-      renderRoles();
-    }
-
-    // Initialiser l'affichage
-    renderRoles();
-  </script>
-</body>
+  <ul class="sidebar-nav">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="acces-site12.html">🛰️ Accès Site-12</a></li>
+    <li><a href="branches.html">Branches Opérationnelles</a></li>
+    <li><a href="groupes.html">Groupes d’intérêt</a></li>
+    <li><a href="message.html">Message du O-1</a></li>
+    <hr />
+    <li><a href="projet-hrp.html">Projet HRP</a></li>
+    <li><a href="charte.html">Charte</a></li>
+    <li><a href="debuter.html">Débuter</a></li>
+    <li><a href="recrutement.html">Recrutement</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<h1>Interface Admin Secrète</h1></body>
 </html>
