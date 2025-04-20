@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Branche Communication</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: 'Share Tech Mono', monospace;
+        }
+        header {
+            background-color: #111;
+            border-bottom: 2px solid cyan;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: cyan;
+        }
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px;
+        }
+        .intro {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-left: 4px solid cyan;
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #00ffff;
+        }
+        .grades {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .grade {
+            background-color: #222;
+            border: 2px solid #00ffff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .grade h3 {
+            margin-top: 0;
+            color: cyan;
+        }
+        .grade p {
+            margin: 5px 0;
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 30px;
+            color: cyan;
+            border: 1px solid cyan;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        a.button:hover {
+            background-color: cyan;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Branche Communication</h1>
+    </header>
+    <main>
+        <div class="intro">
+            <h2>Présentation</h2>
+            <p>La branche communication est le relais d’information du site : messages internes, rapports RP, transmissions d’alerte et journal officiel.</p>
+        </div>
+        <div class="grades">
+            <div class="grade">
+                <h3>Rédacteur</h3>
+                <p><strong>Rôle :</strong> Rédige des rapports RP et résumés d’événements.</p>
+                <p><strong>Accès :</strong> Zones EZ</p>
+            </div>
+            <div class="grade">
+                <h3>Relais Radio</h3>
+                <p><strong>Rôle :</strong> Transmet les communications internes de sécurité.</p>
+                <p><strong>Accès :</strong> Zones EZ / HCZ</p>
+            </div>
+            <div class="grade">
+                <h3>Chargé RP</h3>
+                <p><strong>Rôle :</strong> Crée les comptes-rendus d’opérations et coordonne les infos.</p>
+                <p><strong>Accès :</strong> Toutes zones sauf CCZ</p>
+            </div>
+        </div>
+        <a class="button" href="../branches.html">⬅️ Retour aux branches</a>
+    </main>
+</body>
+</html>

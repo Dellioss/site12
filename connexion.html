@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentification - Site-12</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 2em;
+      font-size: 1.2em;
+    }
+
+    .terminal {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .input-line {
+      display: flex;
+      align-items: center;
+    }
+
+    .input-line span {
+      margin-right: 10px;
+    }
+
+    input {
+      background: black;
+      border: none;
+      color: #00ff00;
+      font-family: inherit;
+      font-size: 1em;
+      outline: none;
+    }
+
+    #log {
+      white-space: pre-line;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <a href="index.html"><img src="assets/logo.png" alt="Site-12" class="logo" /></a>
+  </div>
+  <ul class="sidebar-nav">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="acces-site12.html">🛰️ Accès Site-12</a></li>
+    <li><a href="branches.html">Branches Opérationnelles</a></li>
+    <li><a href="groupes.html">Groupes d’intérêt</a></li>
+    <li><a href="message.html">Message du O-1</a></li>
+    <hr />
+    <li><a href="projet-hrp.html">Projet HRP</a></li>
+    <li><a href="charte.html">Charte</a></li>
+    <li><a href="debuter.html">Débuter</a></li>
+    <li><a href="recrutement.html">Recrutement</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+  <div class="terminal">
+    <div class="input-line">
+      <span>ID d'agent :</span>
+      <input type="text" id="agentId" autofocus />
+    </div>
+    <div class="input-line">
+      <span>Mot de passe :</span>
+      <input type="password" id="password" />
+    </div>
+    <button onclick="login()">Connexion</button>
+
+    <div id="log"></div>
+  </div>
+
+  <script>
+    function delay(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function login() {
+      const log = document.getElementById('log');
+      log.innerText = "> Connexion au système...";
+      await delay(1000);
+
+      const steps = [
+        "Vérification ID...",
+        "Analyse du mot de passe...",
+        "Authentification biométrique simulée...",
+        "Accès sécurisé au réseau Fondation...",
+        "Connexion au Site-12 en cours...",
+        "Autorisations O6 : Vérifiées",
+        "Bienvenue, Agent autorisé."
+      ];
+
+      for (const step of steps) {
+        log.innerText += `\n> ${step}`;
+        await delay(1200);
+      }
+
+      localStorage.setItem("autorise", "true");
+      await delay(1500);
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

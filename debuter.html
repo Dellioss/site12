@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Debuter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #000 url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #00ffcc;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #00ffcc;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 0 0 5px #00ffcc;
+    }
+    nav#sidebar {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      padding: 2rem 1rem;
+      transition: left 0.3s ease;
+      border-right: 2px solid #00ffcc;
+      z-index: 1000;
+    }
+    nav#sidebar.open {
+      left: 0;
+    }
+    nav#sidebar a {
+      display: block;
+      color: #00ffcc;
+      margin: 1rem 0;
+      text-decoration: none;
+    }
+    nav#sidebar a:hover {
+      color: white;
+    }
+    #toggleSidebar {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: #00ffcc;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 1001;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.7);
+      margin-bottom: 2rem;
+      border: 1px solid #00ffcc;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #00ffaa;
+      border-bottom: 1px solid #00ffaa;
+      padding-bottom: 0.5rem;
+    }
+    .section-content {
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+    .category {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: #00ffff;
+      border-bottom: 2px solid #00ffff;
+      padding-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="toggleSidebar">&#9654;</div>
+  <nav id="sidebar">
+    <div class="category">RP</div>
+    <a href="acces-site12.html">🛰️ Accès Site-12</a>
+    <a href="branches.html">Branches Opérationnelles</a>
+    <a href="groupes.html">Groupes d'intérêt</a>
+    <a href="historique.html">Historique</a>
+    <a href="message-o1.html">Message du O-1</a>
+    <div class="category">HRP</div>
+    <a href="projet-hrp.html">Projet HRP</a>
+    <a href="charte.html">Charte</a>
+    <a href="debuter.html">Débuter</a>
+    <a href="recrutement.html">Recrutement</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Debuter</h1>
+  </header>
+
+  <section>
+    <h2>Debuter</h2>
+    <div class="section-content">
+      <p>Guide pour les nouveaux : comment commencer, créer sa fiche, intégrer une branche.</p>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('toggleSidebar').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

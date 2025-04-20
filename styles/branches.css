@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background-color: #0b0b0b;
+  color: #00ffff;
+  background-image: url('../assets/bg-scan-dark.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+  border-bottom: 2px solid red;
+}
+
+h1 {
+  color: red;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #00ffff;
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid #00ffff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #00ffff;
+  color: #000;
+}
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 50px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.branch-card {
+  background-color: rgba(0, 255, 255, 0.1);
+  border: 2px solid #00ffff;
+  padding: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00ffff;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
+.branch-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.scientifique { border-color: #58e3ff; }
+.securite { border-color: #ff5858; }
+.maintenance { border-color: #ffc658; }
+.gestion { border-color: #58ff94; }
+.communication { border-color: #c658ff; }
